@@ -367,10 +367,7 @@
 		var sort = opts.sort || "nombre";
 		sort = sort in resultado[0] ? sort : "nombre";
 		var sortDir = opts.sortDir*1 || 1;
-		console.log("sortDir", sortDir);
 		sortDir = [-1,1].indexOf(sortDir) > -1 ? sortDir : 1;
-		console.log("sortDir Final", sortDir);
-
 		return resultado.sort(function(a,b){ return a[sort] < b[sort] ? -1*sortDir : (a[sort] > b[sort] ? 1*sortDir : 0); });
 	};
 	RyC.getRegionesNombres = function(){
